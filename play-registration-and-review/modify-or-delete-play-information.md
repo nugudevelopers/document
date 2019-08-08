@@ -11,7 +11,7 @@ Play 상태가 심사 대기(심사 요청 중) 상태일 때는 심사 요청�
 
 심사 요청한 Play의 심사 결과가 반려로 결정되면 심사 요청 전 상태로 돌아가기 때문에 기본 정보를 수정하거나 삭제할 수 있습니다.
 
-![](../images/play-registration-and-review/ch4_42_c01.png)
+![](/images/play-registration-and-review/ch4_42_c01.png)
 
 단, Play가 아래 상태와 같은 경우에는 수정하거나 삭제할 수 없습니다.
 

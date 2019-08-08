@@ -1,6 +1,27 @@
 Release Notes
 ==================
+## Version 1.4.0
 
+업데이트일 : 2019년 7월 11일
+
+
+####1. 새로운 기능
+* 실패 발화 분석 도구 추가 : [자세히 알아보기](/create-plays-with-play-builder/log-mining.md)
+
+
+####2. 향상/변경된 기능
+* Translator, Normalizer의 Source/Target 최대 글자수를 50에서 200으로 변경
+
+
+
+####3. 버그 수정
+* Prompt 입력창에서 백스페이스 글자 삭제 버그 수정 
+* Translator 이름 중복 버그 수정 및 정렬 수정
+* 학습 문장 분석 도구 내 Intent 미노출 현상 수정
+* Play 구조에서 Common Action 하위 브랜치 노출
+  
+<br>
+<br>
 
 ## Version 1.3.0
 
@@ -27,6 +48,7 @@ Release Notes
 * 일부 단어 Entity 검색 안되는 버그 수정
 * 여러 개의 Response Filter를 적용할 때 멈추는 현상 수정
   
+<br>
 <br>
 ## Version 1.2.0
 
@@ -57,7 +79,7 @@ Release Notes
 
 
 <br>
-
+<br>
 ## Version 1.1.0
 
 업데이트일 : 2018년 12월 13일

@@ -5,11 +5,11 @@ Play 정보 등록 {#register-a-play}
 
 
 1. `Play 등록하기` 버튼을 클릭하세요. Play Builder에서 개발한 Play 리스트 팝업이 표시됩니다.
-![](../images/play-registration-and-review/ch4_41_c01.png)
+![](/images/play-registration-and-review/ch4_41_c01.png)
 2. 등록할 Play를 선택하고 `다음` 버튼을 클릭하세요. Play의 Snapshot 버전 선택 화면으로 이동 합니다.
-![](../images/play-registration-and-review/ch4_41_c02.png)
+![](/images/play-registration-and-review/ch4_41_c02.png)
 3. 등록할 Snapshot 버전을 선택하고 `확인` 버튼을 클릭하세요. Play 정보 등록 화면으로 이동합니다. 
-![](../images/play-registration-and-review/ch4_41_c03.png)
+![](/images/play-registration-and-review/ch4_41_c03.png)
 
 Play 정보 등록은 총 3단계이며, 1단계 기본 정보 입력 → 2단계 연동 정보 입력 → 3단계 배포/심사 정보 등록의 순서로 진행됩니다.
 
@@ -17,7 +17,7 @@ Play 정보 등록은 총 3단계이며, 1단계 기본 정보 입력 → 2단�
 ## 기본 정보 {#basic-information}
 Play 기본 정보는 Play 관련 필수 정보로 아래의 내용들을 등록해야 합니다. 입력을 완료하면 `다음` 버튼을 클릭합니다.
 
-  ![](../images/play-registration-and-review/ch4_411_c01.png)
+  ![](/images/play-registration-and-review/ch4_411_c01.png)
 
 **① Play 서비스명**  
   사용자에게 보여지는 Play의 서비스명입니다. NUGU App과 향후 Play Ground(스토어)에 노출됩니다.
@@ -28,28 +28,25 @@ Play 기본 정보는 Play 관련 필수 정보로 아래의 내용들을 등록
   Play 서비스ID는 reverse domain name 표기 형태로 입력해야 하며, 다른 Play에서 이미 사용 중인 서비스ID는 등록할 수 없습니다.
   (입력 예 : com.example.myPlay)
 
-**③ Play revision**  
-  선택한 Play의 현재 버전을 확인할 수 있습니다.
-
-**④ Play 호출 이름**  
+**③ Play 호출 이름**  
   사용자가 Play를 시작하기 위해 부를 때 사용하는 이름입니다.
   반드시 3자 이상의 한글로만 등록해야 하며, 가능하면 8자 이하로 기억하고 부르기 쉬운 단어를 사용하는 것이 좋습니다.
   Play 호출 이름은 Play 심사 항목이기 때문에 신청하신 이름을 그대로 사용할 수 있다고 보장하지 않습니다.
   널리 쓰이는 일반적인 이름이나 타사명, 서비스에 해당하는 용어 또는 이와 유사한 호출 이름은 사용할 수 없기 때문에,심사를 하면서 운영자가 별도로 연락을 드릴 수도 있습니다.
   효과적인 호출 이름을 등록할 수 있도록 먼저 [[작성 가이드 보기](#define-an-invocation-name)]를 읽어보신 후에 등록 절차를 진행해주시길 권장합니다.
 
-**⑤ Play 설명**  
+**④ Play 설명**  
   등록하고자 하는 Play에 대한 설명(서비스 설명)을 기재합니다.
   Play 심사 시 Play에 대해서 파악을 할 수 있는 영역이므로, 자신의 Play의 특징이나 서비스 콘셉트 등을 쉽게 파악할 수 있도록 작성해 주세요.
   설명은 최대 200자까지 입력할 수 있습니다.
 
-**⑥ 제작사명**  
+**⑤ 제작사명**  
   Play를 개발한 주체(개인, 회사 또는 단체)의 이름 또는 별칭을 입력합니다.
   등록된 내용은 NUGU App과 추후 Play Ground에 노출됩니다.
   법인의 경우에는 Play 승인 과정에서 관련 자료(예: 법인 등록증, 사업자등록증 등)를 요청할 수 있습니다.
   제작사명은 최대 30자까지 입력할 수 있습니다.
 
-**⑦ 담당자 정보**  
+**⑥ 담당자 정보**  
   연락 가능한 서비스 담당자의 이메일 정보를 입력합니다.
   입력한 이메일로 Play에 대한 주요 내용(심사 승인, 반려, 상태 변경, 주요 공지)이 전달됩니다.
   법인인 경우에는 개인 이메일 보다는 개발, CS 등 폭넓은 영역에서 의견을 받을 수 있는 대표 이메일 계정을 입력해주시는 편이 좋습니다.
@@ -98,7 +95,7 @@ Play 호출 이름은 위 조건을 기준으로 사용 승인 심사를 진행�
 ## 연동 정보 {#link-information}
 사용자에게 제공할 Play 타입을 선택하고, 제공하려는 Play의 사용자 계정이 NUGU 사용자 계정과 연결이 필요할 경우 계정 연동에 관련된 정보를 입력합니다.
 
-  ![](../images/play-registration-and-review/ch4_412_c01.png)
+  ![](/images/play-registration-and-review/ch4_412_c01.png)
 
 **① Play 타입**
 
@@ -112,7 +109,7 @@ Play 호출 이름은 위 조건을 기준으로 사용 승인 심사를 진행�
   제공하려는 Play의 사용자 계정과 NUGU 사용자 계정의 연결이 필요할 경우, 계정 연동에서 [사용]을 선택하고, 다음 정보를 등록합니다.
   계정 연동에 대한 자세한 내용은 [[계정 연동 가이드 보기]](/create-plays-with-play-builder/link-oauth20.md#link-oauth20)를 참고하세요.
 
-  ![](../images/play-registration-and-review/ch4_412_c02.png)
+  ![](/images/play-registration-and-review/ch4_412_c02.png)
     
 **ⓐ 로그인 URL**  
   사용자가 계정을 연동할 수 있도록 이동하는 URL을 등록합니다.
@@ -160,7 +157,7 @@ Play 심사 승인에 필요한 정보와 사용자에게 Play를 설명하기 �
 {% endhint %}
 
 
-  ![](../images/play-registration-and-review/ch4_413_c01.png)
+  ![](/images/play-registration-and-review/ch4_413_c01.png)
 
 **① Play 사용 지역**  
   등록한 Play가 서비스될 지역을 선택하는 기능으로 국내에서만 Play를 제공할 수 있습니다.
@@ -183,7 +180,7 @@ Play 심사 승인에 필요한 정보와 사용자에게 Play를 설명하기 �
 
   Play와 관련된 면책 조항을 제공하는 URL을 입력해주세요. 추후 Play Ground에 정보가 제공됩니다.
 
-  ![](../images/play-registration-and-review/ch4_413_c02.png)
+  ![](/images/play-registration-and-review/ch4_413_c02.png)
 
 **⑧ 카테고리 선택**  
   제공하려는 Play의 성격에 맞는 카테고리를 선택합니다.
@@ -200,20 +197,23 @@ Play 심사 승인에 필요한 정보와 사용자에게 Play를 설명하기 �
   2. **주요 기능**: 해당 Play가 제공하는 대표 기능을 등록합니다.
   3. **대표 발화문**: 위 주요 기능에서 입력한 기능과 매칭되는 대표 발화문(음성 명령어)을 입력합니다. 기능당 1개씩만 입력할 수 있습니다.
 
-  ![](../images/play-registration-and-review/ch4_413_c03.png)
+  ![](/images/play-registration-and-review/ch4_413_c03.png)
 
-**⑪ 서비스 기획서 첨부(선택)**  
+**⑪ 연결링크(선택)**  
+특정 페이지를 소개하고 싶을 경우, 텍스트로 입력하고 연결될 링크를 삽입할 수 있습니다. 다양한 콘텐츠를 소개하고 싶을 때 콘텐츠 리스트가 있는 페이지 연결이 가능합니다.
+
+**⑫ 서비스 기획서 첨부(선택)**  
 해당 Play 대한 서비스 기획서를 첨부할 수 있습니다.(첨부 가능한 파일 종류는 pdf, doc, docx, ppt, pptx입니다.)
 서비스 기획서 첨부는 선택 사항입니다.
 
-**⑫ 기타 파일 첨부(선택)**  
+**⑬ 기타 파일 첨부(선택)**  
 Play 승인 심사 결과에 따라 심사 담당자가 추가 보완 서류(예: 사업자등록증 및 법인등록증 등)를 요청할 수 있습니다.
 이때, 압축 파일(\*.zip), 이미지 파일 형태로도 관련 파일을 등록할 수 있습니다.
 
-**⑬ 검색 키워드(선택)**  
+**⑭ 검색 키워드(선택)**  
 특정 키워드로 사용자가 Play를 검색할 때, 그 키워드에 맞춰 검색 결과를 보여줄 때 자신의 Play가 노출될 수 있도록 제공하는 기능입니다.
 
-**⑭ 아이콘 등록**  
+**⑮ 아이콘 등록**  
 NUGU App과 Play Ground(스토어)를 통해 보여줄 Play 아이콘을 등록합니다.(PNG, JPG 파일)
 
 1. **작은 아이콘**: 108 X 108 px 사이즈의 이미지 파일로 `NUGU App` > `NUGU play` 페이지와 Play 페이지에 보여집니다.

@@ -8,7 +8,7 @@ Prompt를 생성할 때 외부 서버로부터 필요한 정보를 가져와서 
 다음 그림과 같이 사용자가 '명동 날씨 알려줘'라고 발화한 경우, 'ask.weather' Intent와 함께 '명동'을 Backend proxy로 전달합니다.  
 Backend proxy는 기상 정보를 제공하는 외부 서버를 호출하여 원하는 시간의 날씨 정보를 얻어와 `{{status}}`로 결과를 반환하고, 대화 관리자 `{{location}}`과 `{{status}}`를 이용하여 날씨를 안내하는 응답을 스피커로 보내게 됩니다.
 
-![](../images/nugu-developers-an-overview/ch1_114_01.png)
+![](/images/nugu-developers-an-overview/ch1_114_01.png)
 
 Backend proxy를 사용하는 경우는 다음과 같습니다.
 

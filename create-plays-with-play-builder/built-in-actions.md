@@ -44,7 +44,7 @@ Built-in Action은 다음과 같습니다.
 
 ![](../images/create-plays-with-play-builder/ch3_3231_c04.png)
 
-### NUGU.ACTION.fallback
+### NUGU.ACTION.fallback {#fallback}
 
 사용자가 Play 세션 내에서 발화를 했지만 처리할 Intent가 없는 경우에 동작합니다.
 

@@ -79,7 +79,7 @@ BBQ 황금 올리브치킨이 16000원에 준비되어 있습니다. 주문이 �
 
 NUGU의 페르소나는 20대 후반에서 30대 초반의 여성으로, 차분하고 편안함을 지향하는 다정다감한 성격의 친구같은 비서입니다. 세부 대화 스타일은 다음과 같으며, 작성한 Prompt가 NUGU 페르소나와 일치하는지 검토하는 것을 권장합니다.
 
-![](../images/voice-service-design-guideline/ch2_24_01.png)
+![](/images/voice-service-design-guideline/ch2_24_01.png)
 
 ### 스타일
 

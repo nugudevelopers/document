@@ -183,12 +183,12 @@ audioItem.stream.progressReport는 오디오의 시작 시간을 기준으로 �
 }
 ```
 
-Play Direcitve가 PlaybackFinished 이벤트를 수신하는 경우에는 다음과 같이 처리할 수 있습니다.
+Play가 PlaybackFinished 이벤트를 수신하는 경우에는 다음과 같이 처리할 수 있습니다.
 
   * Play List를 재생 중이고 다음 곡이 있는 경우 Play Directive를 전송
   * 한 곡만 재생하는 중이거나, Play List의 마지막 곡을 재생 중이면서 전체 반복을 다시 하지 않는 경우 Stop Directive를 전송
 
-Stop Directive는 전송하지 않아도 되지만, 위의 두 경우와 같이 다음 곡 재생 여부를 명확히 전달하는 것이 좋습니다.
+Stop Directive는 전송하지 않아도 되지만, 재생 중인 경우는 다음 곡 재생 여부를 명확히 전달하는 것이 좋습니다.
 
 #### PlaybackStopped
 

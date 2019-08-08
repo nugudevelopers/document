@@ -5,7 +5,7 @@
 
 예를 들면 알람을 설정하는 기능에 대한 발화는 아래와 같이 정의될 수 있습니다.
 
-![](../images/voice-service-design-guideline/ch2_22_01.png)
+![](/images/voice-service-design-guideline/ch2_22_01.png)
 
 사용자 발화 문장의 구성 요소는 기기를 Wake-up시키는 호출어(Invocation Word) 외에 Entity와 Intent로 구분될 수 있습니다.  
 

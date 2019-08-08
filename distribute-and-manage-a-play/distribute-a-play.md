@@ -3,8 +3,24 @@ Play 배포 {#distribute-a-play}
 
 Play 심사 승인이 완료된 Play는 배포 설정 기능을 통해 Play 배포일을 등록해야 NUGU 서비스 제공이 가능합니다.
 
+## 배포 프로세스 {#distribution-process}
+
+[심사 프로세스](/play-registration-and-review/play-review.md#review-process)를 거쳐 “심사 완료“ 상태가 됐다면, 희망하는 배포 날짜를 포함하여 [배포 신청](#distribution-request)하실 수 있습니다.<br>
+정상적으로 배포가 완료되면 사용자들은 해당 Play를 호출하여 사용할 수 있습니다. 
+
+{% hint style='info' %}
+기본적으로 이용 가능 기기는 “NUGU”, “NUGU mini”, “NUGU candle”이며, 사전 요청 또는 내부 결정에 따라 추가적인 검증을 거쳐 “NUGU nemo”, “Tmap”, “Btv” 등 NUGU플랫폼이 적용된 다른 기기에도 적용이 가능합니다.
+
+요청 방법 : `Support > 문의사항, 제휴제안`
+{% endhint %}
+
+{% hint style='tip' %}
+서비스 중인 Play를 중지하는 방법에 대한 자세한 내용은 [Play 상태 변경(중지 및 서비스 재개)](/distribute-and-manage-a-play/manage-a-play.md#change-play-status)를 참고하세요.
+{% endhint %}
+
 ## 배포 정책 {#distribution-policy}
-Play 배포는 NUGU developers의 정책에 따라 주 1회 배포가 진행됩니다. Play는 매주 수요일에 상용 배포되며, 화요일까지 심사가 완료되어 배포 신청이 접수된 Play에 한해 그 주 수요일에 적용됩니다.
+Play 배포는 평일 10~17시에 수시로 진행됩니다. [배포 신청](#distribution-request)이후, 이후, 배포 희망 일자 전후로 가능한 시점에 배포합니다.<br>
+Play 동작에 이상이 있거나, 내부 사정에 따라 배포가 어려운 경우, 배포 요청일과 실제 배포일이 상이할 수 있습니다.
 
 ## 배포 신청 {#distribution-request}
 Play의 심사 승인이 완료되면 Play 등록 현황 리스트에 `배포설정` 버튼이 생성됩니다. 이 버튼을 이용하여 배포를 신청할 수 있습니다.
@@ -36,15 +52,5 @@ Play 배포 대기 상태(지정한 배포일이 아직 도래하지 않은 상�
 
 {% hint style='info' %}
 배포를 다시 신청하려면 일정을 재설정해야 합니다. 배포 신청에 대한 자세한 내용은 [배포 신청](#distribution-request)을 참고하세요.
-{% endhint %}
-
-## 배포 프로세스 {#distribution-process}
-
-배포는 별다른 설정 없이 자동으로 진행되며, 지정 배포일에 해당 Play는 서버 내에 배포됩니다. 정상적으로 배포가 완료되면 사용자들은 해당 Play를 호출하여 사용할 수 있게 됩니다. 배포가 진행된 이후에는 취소할 수 없습니다.
-
-만약, 배포된 Play에 대해서 긴급한 이슈로 배포 취소가 필요한 경우에는 `NUGU developers` > `NUGU play kit` > `관리` > `Play 관리`에서 `Play 중지`를 실행하여 서비스를 중지시켜야 합니다. 
-
-{% hint style='tip' %}
-서비스 중인 Play를 중지하는 방법에 대한 자세한 내용은 [Play 상태 변경(중지 및 서비스 재개)](/distribute-and-manage-a-play/manage-a-play.md#change-play-status)를 참고하세요.
 {% endhint %}
 

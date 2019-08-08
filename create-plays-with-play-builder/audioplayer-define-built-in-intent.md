@@ -103,6 +103,6 @@ AudioPlayer Interface는 스피커의 상태에 따라 Play로 전달되는 이�
 
 | 이벤트                                  | 설명                                                                                |
 |--------------------------------------|-----------------------------------------------------------------------------------|
-| PlaybackNearlyFinished               | 오디오 파일 재생이 끝나기 전에 전달되며, 다음의 두 가지 처리 방안이 있습니다. <br> 1. 플레이 리스트를 재생하는 경우에는 다음 곡을 이어서 재생하기 위한 Play Directive를 전송합니다. <br> 2. 더 이상 재생할 곡이 없으면 Stop Directive를 전송합니다.(필수 사항은 아니지만 Stop Directive 전송을 권장합니다.) |
+| PlaybackFinished               |  1. 플레이 리스트를 재생하는 경우에는 다음 곡을 이어서 재생하기 위한 Play Directive를 전송합니다. <br> 2. 더 이상 재생할 곡이 없으면 Stop Directive를 전송합니다.(필수 사항은 아니지만 Stop Directive 전송을 권장합니다.) |
 | ProgressReportDelayInMilliseconds    | 지정된 시간 위치까지 재생했을 때 이벤트를 한 번 발생시킵니다. <br> 예) 과금을 위해 1분 이상 재생되는 경우를 체크하고자 하는 경우                                              |
 | ProgressReportIntervalInMilliseconds | 지정된 시간 주기로 계속 이벤트가 호출됩니다. <br> 예) 인증을 위해 스트리밍 URL을 주기적으로 유효성 검사(Validation)를 해야 하는 경우에 사용됩니다.                    |

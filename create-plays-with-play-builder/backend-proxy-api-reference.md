@@ -23,7 +23,10 @@ Authorization: token TOKEN_STRING
                 "value": VALUE
             }
         }
-    }
+    },
+    "event": {
+        "type": "{{string}}"
+    },  
 	"context": {
         "session": {
             "accessToken": "{{string}}"
@@ -67,6 +70,8 @@ Authorization: token TOKEN_STRING
 | action                                   | json    |           |                                                                        |
 | action.actionName                        | string  | Y         | 현재 요청하는 Action의 이름입니다.                                                 |
 | action.parameters                        | string  | Y         | Action에서 설정된 파라미터로 Play Builder에서 설정한 내용을 포함합니다. <br>(단, 값이 null인 경우 요청에서 제외됩니다. <br> 요청에서 생략되었더라도 Backend parameter를 응답 값으로 포함해야 합니다.)  <br><br> KEY - Play Builder에서 Action 내에 정의한 parameter 이름  <br> type - 사용자 발화에서 분석된 Entity인 경우 Play Builder에서 설정한 Entity의 타입 <br>value - 파라미터의 값으로 string 타입                                            |
+| event                                    | json    | Y         |                                                                        |
+| event.type                               | string  | Y         | 디바이스에서 발생한 event의 종류를 나타내며, 이 값에 따라 event의 데이터가 달라집니다. (Capability Interfaces 참조)                                              |
 | context                                  | json    | Y         |                                                                        |
 | context.session                          | json    | Y         |                                                                        |
 | context.session.id                       | string  | Y         | 대화가 유지되는 동안의 유효한 키 값입니다.                                               |
@@ -75,7 +80,7 @@ Authorization: token TOKEN_STRING
 | context.session.isPlay BuilderRequest    | bool    | N         | Play Builder에서 테스트용으로 전달한 요청임을 의미합니다. (기본값: false)                     |
 | context.device                           | json    | Y         |                                                                        |
 | context.device.type                      | string  | Y         | 현재 사용 중인 디바이스 종류를 나타냅니다.                                               |
-| context.device.state                     | json    | Y         | 디바이스의 상태를 나타내는 값으로 현재는 정의된 것이 없습니다.                                    |
+| context.device.state                     | json    | N         | 디바이스의 상태를 나타내는 값으로 현재는 정의된 것이 없습니다.                                    |
 | context.supportedInterfaces              | json    | Y         | 개발한 Play가 특정 Capability Interface를 지원하는 경우 각 Interface별로 상태 정보를 표시합니다. |
 | profile                                  | json    | N         | Private Play에서만 사용됩니다.                                                 |
 | profile.privatePlay                      | json    | N         | Private Play인 경우 정보를 추가합니다.                                            |
