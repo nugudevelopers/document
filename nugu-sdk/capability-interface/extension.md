@@ -22,7 +22,7 @@ Play 에서 알아야 하는 디바이스/Application 의 정보를 [Context](ex
 
 [Android reference](https://github.com/nugu-developers/nugu-android/blob/master/nugu-agent/src/main/java/com/skt/nugu/sdk/agent/extension/ExtensionAgentInterface.kt#L42)
 
-[iOS reference](https://github.com/nugu-developers/nugu-ios/blob/master/NuguAgents/Interface/Extension/ExtensionAgentDelegate.swift#L35)
+[iOS reference](https://github.com/nugu-developers/nugu-ios/blob/master/NuguAgents/Sources/CapabilityAgents/Extension/ExtensionAgentDelegate.swift#L35)
 
 ### Directive 수신
 
@@ -30,7 +30,7 @@ Play 에서 알아야 하는 디바이스/Application 의 정보를 [Context](ex
 
 [Android reference](https://github.com/nugu-developers/nugu-android/blob/master/nugu-agent/src/main/java/com/skt/nugu/sdk/agent/extension/ExtensionAgentInterface.kt#L36)
 
-[iOS reference](https://github.com/nugu-developers/nugu-ios/blob/master/NuguAgents/Interface/Extension/ExtensionAgentDelegate.swift#L44)
+[iOS reference](https://github.com/nugu-developers/nugu-ios/blob/master/NuguAgents/Sources/CapabilityAgents/Extension/ExtensionAgentDelegate.swift#L44)
 
 ### Event 전송
 
@@ -38,7 +38,7 @@ Play 에서 알아야 하는 디바이스/Application 의 정보를 [Context](ex
 
 [Android reference](https://github.com/nugu-developers/nugu-android/blob/master/nugu-agent/src/main/java/com/skt/nugu/sdk/agent/extension/ExtensionAgentInterface.kt#L69)
 
-[iOS reference](https://github.com/nugu-developers/nugu-ios/blob/master/NuguAgents/Interface/Extension/ExtensionAgentProtocol.swift#L39)
+[iOS reference](https://github.com/nugu-developers/nugu-ios/blob/master/NuguAgents/Sources/CapabilityAgents/Extension/ExtensionAgentProtocol.swift#L39)
 
 ## Context
 

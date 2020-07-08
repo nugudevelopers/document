@@ -22,7 +22,7 @@ NUGU 서버에서 에러가 발생할 경우 [Exception](system.md#exception) di
 
 [Android reference](https://github.com/nugu-developers/nugu-android/blob/master/nugu-agent/src/main/java/com/skt/nugu/sdk/agent/system/SystemAgentInterface.kt#L46)
 
-[iOS reference](https://github.com/nugu-developers/nugu-ios/blob/master/NuguAgents/Interface/System/SystemAgentDelegate.swift#L25)
+[iOS reference](https://github.com/nugu-developers/nugu-ios/blob/master/NuguAgents/Sources/CapabilityAgents/System/SystemAgentDelegate.swift#L25)
 
 [Linux reference](https://github.com/nugu-developers/nugu-linux/blob/master/include/capability/system_interface.hh#L68)
 
@@ -34,7 +34,7 @@ Application 의 상황에 따라 NUGU 로그인 화면으로 이동하거나 NUG
 
 [Android reference](https://github.com/nugu-developers/nugu-android/blob/master/nugu-agent/src/main/java/com/skt/nugu/sdk/agent/system/SystemAgentInterface.kt#L51)
 
-[iOS reference](https://github.com/nugu-developers/nugu-ios/blob/master/NuguAgents/Interface/System/SystemAgentDelegate.swift#L26)
+[iOS reference](https://github.com/nugu-developers/nugu-ios/blob/master/NuguAgents/Sources/CapabilityAgents/System/SystemAgentDelegate.swift#L26)
 
 [Linux reference](https://github.com/nugu-developers/nugu-linux/blob/master/include/capability/system_interface.hh#L79)
 

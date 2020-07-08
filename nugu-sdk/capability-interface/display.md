@@ -12,7 +12,7 @@ Template 화면의 상태 정보를 [Context](display.md#context) 에 포함시�
 
 [Android reference](https://github.com/nugu-developers/nugu-android/blob/master/nugu-agent/src/main/java/com/skt/nugu/sdk/agent/display/DisplayAggregatorInterface.kt#L77)
 
-[iOS reference](https://github.com/nugu-developers/nugu-ios/blob/master/NuguAgents/Interface/Display/DisplayAgentDelegate.swift#L24)
+[iOS reference](https://github.com/nugu-developers/nugu-ios/blob/master/NuguAgents/Sources/CapabilityAgents/Display/DisplayAgentDelegate.swift#L24)
 
 ### UI 구성
 
@@ -22,7 +22,7 @@ Template 화면은 [Close](display.md#close) directive 또는 SDK 내부 timer �
 
 [Android reference](https://github.com/nugu-developers/nugu-android/blob/master/nugu-agent/src/main/java/com/skt/nugu/sdk/agent/display/DisplayAggregatorInterface.kt#L41)
 
-[iOS reference](https://github.com/nugu-developers/nugu-ios/blob/master/NuguAgents/Interface/Display/DisplayAgentDelegate.swift#L24)
+[iOS reference](https://github.com/nugu-developers/nugu-ios/blob/master/NuguAgents/Sources/CapabilityAgents/Display/DisplayAgentDelegate.swift#L24)
 
 ### UI 제어
 
@@ -30,7 +30,7 @@ Template 의 focus 와 scroll 은 `사용자 발화` 에 따라 [ControlFocus](d
 
 [Android reference](https://github.com/nugu-developers/nugu-android/blob/master/nugu-agent/src/main/java/com/skt/nugu/sdk/agent/display/DisplayAggregatorInterface.kt#L77)
 
-[iOS reference](https://github.com/nugu-developers/nugu-ios/blob/master/NuguAgents/Interface/Display/DisplayAgentDelegate.swift#L24)
+[iOS reference](https://github.com/nugu-developers/nugu-ios/blob/master/NuguAgents/Sources/CapabilityAgents/Display/DisplayAgentDelegate.swift#L24)
 
 ### 사용자 인터렉션 처리
 
@@ -38,13 +38,13 @@ Template 하위 항목 선택시 [ElementSelected](display.md#elementselected) e
 
 [Android reference](https://github.com/nugu-developers/nugu-android/blob/master/nugu-agent/src/main/java/com/skt/nugu/sdk/agent/display/DisplayInterface.kt#L34)
 
-[iOS reference](https://github.com/nugu-developers/nugu-ios/blob/master/NuguAgents/Interface/Display/DisplayAgentProtocol.swift#L42)
+[iOS reference](https://github.com/nugu-developers/nugu-ios/blob/master/NuguAgents/Sources/CapabilityAgents/Display/DisplayAgentProtocol.swift#L42)
 
 Template 에 화면에 대한 사용자 interaction 발생시 SDK 로 notify 해주어야 내부 timer\(template 일정시간 노출 후 종료하기 위한\) 가 갱신됩니다.
 
 [Android reference](https://github.com/nugu-developers/nugu-android/blob/master/nugu-agent/src/main/java/com/skt/nugu/sdk/agent/display/DisplayAggregatorInterface.kt#L84)
 
-[iOS reference](https://github.com/nugu-developers/nugu-ios/blob/master/NuguAgents/Interface/Display/DisplayAgentProtocol.swift#L45)
+[iOS reference](https://github.com/nugu-developers/nugu-ios/blob/master/NuguAgents/Sources/CapabilityAgents/Display/DisplayAgentProtocol.swift#L45)
 
 ## Context
 

@@ -16,7 +16,7 @@ description: 음성 합성 결과를 전달받기 위한 규격
 
 [Android reference](https://github.com/nugu-developers/nugu-android/blob/master/nugu-agent/src/main/java/com/skt/nugu/sdk/agent/tts/TTSAgentInterface.kt#L48)
 
-[iOS reference](https://github.com/nugu-developers/nugu-ios/blob/master/NuguAgents/Interface/TextToSpeech/TTSAgentDelegate.swift#L29)
+[iOS reference](https://github.com/nugu-developers/nugu-ios/blob/master/NuguAgents/Sources/CapabilityAgents/TextToSpeech/TTSAgentDelegate.swift#L29)
 
 [Linux reference](https://github.com/nugu-developers/nugu-linux/blob/master/include/capability/tts_interface.hh#L68)
 

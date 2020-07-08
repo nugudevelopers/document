@@ -20,7 +20,7 @@ description: 음성인식 결과를 Play 로 전달하기 위한 규격
 
 [Android reference](https://github.com/nugu-developers/nugu-android/blob/master/nugu-agent/src/main/java/com/skt/nugu/sdk/agent/asr/ASRAgentInterface.kt#L189)
 
-[iOS reference](https://github.com/nugu-developers/nugu-ios/blob/master/NuguAgents/Interface/AutomaticSpeechRecognition/ASRAgentProtocol.swift#L45)
+[iOS reference](https://github.com/nugu-developers/nugu-ios/blob/master/NuguAgents/Sources/CapabilityAgents/AutomaticSpeechRecognition/ASRAgentProtocol.swift#L45)
 
 [Linux reference](https://github.com/nugu-developers/nugu-linux/blob/master/include/capability/asr_interface.hh#L152)
 
@@ -28,7 +28,7 @@ description: 음성인식 결과를 Play 로 전달하기 위한 규격
 
 [Android reference](https://github.com/nugu-developers/nugu-android/blob/master/nugu-agent/src/main/java/com/skt/nugu/sdk/agent/asr/ASRAgentInterface.kt#L120)
 
-[iOS reference](https://github.com/nugu-developers/nugu-ios/blob/master/NuguAgents/Interface/AutomaticSpeechRecognition/ASRAgentDelegate.swift#L28)
+[iOS reference](https://github.com/nugu-developers/nugu-ios/blob/master/NuguAgents/Sources/CapabilityAgents/AutomaticSpeechRecognition/ASRAgentDelegate.swift#L28)
 
 [Linux reference](https://github.com/nugu-developers/nugu-linux/blob/master/include/capability/asr_interface.hh#L84)
 
@@ -36,7 +36,7 @@ description: 음성인식 결과를 Play 로 전달하기 위한 규격
 
 [Android reference](https://github.com/nugu-developers/nugu-android/blob/master/nugu-agent/src/main/java/com/skt/nugu/sdk/agent/asr/ASRAgentInterface.kt#L131)
 
-[iOS reference](https://github.com/nugu-developers/nugu-ios/blob/master/NuguAgents/Interface/AutomaticSpeechRecognition/ASRAgentDelegate.swift#L32)
+[iOS reference](https://github.com/nugu-developers/nugu-ios/blob/master/NuguAgents/Sources/CapabilityAgents/AutomaticSpeechRecognition/ASRAgentDelegate.swift#L32)
 
 [Linux reference](https://github.com/nugu-developers/nugu-linux/blob/master/include/capability/asr_interface.hh#L84)
 
@@ -48,7 +48,7 @@ description: 음성인식 결과를 Play 로 전달하기 위한 규격
 
 [Android reference](https://github.com/nugu-developers/nugu-android/blob/master/nugu-agent/src/main/java/com/skt/nugu/sdk/agent/asr/ASRAgentInterface.kt#L200)
 
-[iOS reference](https://github.com/nugu-developers/nugu-ios/blob/master/NuguAgents/Interface/AutomaticSpeechRecognition/ASRAgentProtocol.swift#L53)
+[iOS reference](https://github.com/nugu-developers/nugu-ios/blob/master/NuguAgents/Sources/CapabilityAgents/AutomaticSpeechRecognition/ASRAgentProtocol.swift#L53)
 
 [Linux reference](https://github.com/nugu-developers/nugu-linux/blob/master/include/capability/asr_interface.hh#L163)
 

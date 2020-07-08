@@ -16,7 +16,7 @@ description: 디바이스 위치 정보를 Play 로 전달하기 위한 규격
 
 [Android reference](https://github.com/nugu-developers/nugu-android/blob/master/nugu-agent/src/main/java/com/skt/nugu/sdk/agent/location/LocationProvider.kt#L26)
 
-[iOS reference](https://github.com/nugu-developers/nugu-ios/blob/master/NuguAgents/Interface/Location/LocationAgentDelegate.swift#L31)
+[iOS reference](https://github.com/nugu-developers/nugu-ios/blob/master/NuguAgents/Sources/CapabilityAgents/Location/LocationAgentDelegate.swift#L31)
 
 ## Context
 

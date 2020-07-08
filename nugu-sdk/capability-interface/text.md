@@ -14,7 +14,7 @@ description: 텍스트 명령을 Play 로 전달하기 위한 규격
 
 [Android reference](https://github.com/nugu-developers/nugu-android/blob/master/nugu-agent/src/main/java/com/skt/nugu/sdk/agent/text/TextAgentInterface.kt#L61)
 
-[iOS reference](https://github.com/nugu-developers/nugu-ios/blob/master/NuguAgents/Interface/Text/TextAgentProtocol.swift#L35)
+[iOS reference](https://github.com/nugu-developers/nugu-ios/blob/master/NuguAgents/Sources/CapabilityAgents/Text/TextAgentProtocol.swift#L35)
 
 [Linux reference](https://github.com/nugu-developers/nugu-linux/blob/master/include/capability/text_interface.hh#L111)
 

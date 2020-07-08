@@ -16,7 +16,7 @@ description: 디바이스의 음원 파일 재생을 위한 규격
 
 [Android reference](https://github.com/nugu-developers/nugu-android/blob/master/nugu-agent/src/main/java/com/skt/nugu/sdk/agent/sound/SoundProvider.kt#L22)
 
-[iOS reference](https://github.com/nugu-developers/nugu-ios/blob/master/NuguAgents/Interface/Sound/SoundAgentDataSource.swift#L24)
+[iOS reference](https://github.com/nugu-developers/nugu-ios/blob/master/NuguAgents/Sources/CapabilityAgents/Sound/SoundAgentDataSource.swift#L24)
 
 [Linux reference](https://github.com/nugu-developers/nugu-linux/blob/master/include/capability/sound_interface.hh#L57)
 
