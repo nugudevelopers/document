@@ -16,7 +16,7 @@
 
 [Android reference](https://github.com/nugu-developers/nugu-android/blob/master/nugu-agent/src/main/java/com/skt/nugu/sdk/agent/audioplayer/AudioPlayerAgentInterface.kt#L42)
 
-[iOS reference](https://github.com/nugu-developers/nugu-ios/blob/master/NuguAgents/Interface/AudioPlayer/AudioPlayerAgentDelegate.swift#L28)
+[iOS reference](https://github.com/nugu-developers/nugu-ios/blob/master/NuguAgents/Sources/CapabilityAgents/AudioPlayer/AudioPlayerAgentDelegate.swift#L28)
 
 [Linux reference](https://github.com/nugu-developers/nugu-linux/blob/master/include/capability/audio_player_interface.hh#L89)
 
@@ -28,7 +28,7 @@ AudioPlayer 로 음원을 재생할 때 화면을 구성하기 위해 필요한 
 
 [Android reference](https://github.com/nugu-developers/nugu-android/blob/master/nugu-agent/src/main/java/com/skt/nugu/sdk/agent/display/DisplayAggregatorInterface.kt#L41)
 
-[iOS reference](https://github.com/nugu-developers/nugu-ios/blob/master/NuguAgents/Interface/AudioPlayer/Display/AudioPlayerDisplayDelegate.swift#L24)
+[iOS reference](https://github.com/nugu-developers/nugu-ios/blob/master/NuguAgents/Sources/CapabilityAgents/AudioPlayer/Display/AudioPlayerDisplayDelegate.swift#L24)
 
 ### UI 제어
 
@@ -36,7 +36,7 @@ AudioPlayer 로 음원을 재생할 때 화면을 구성하기 위해 필요한 
 
 [Android reference](https://github.com/nugu-developers/nugu-android/blob/master/nugu-agent/src/main/java/com/skt/nugu/sdk/agent/audioplayer/lyrics/LyricsPresenter.kt#L18)
 
-[iOS reference](https://github.com/nugu-developers/nugu-ios/blob/master/NuguAgents/Interface/AudioPlayer/Display/AudioPlayerDisplayDelegate.swift#L24)
+[iOS reference](https://github.com/nugu-developers/nugu-ios/blob/master/NuguAgents/Sources/CapabilityAgents/AudioPlayer/Display/AudioPlayerDisplayDelegate.swift#L24)
 
 ### 제어 명령
 
@@ -44,7 +44,7 @@ PUI, GUI 등으로 사용자가 [다음](audioplayer.md#nextcommandissued)/[이�
 
 [Android reference](https://github.com/nugu-developers/nugu-android/blob/master/nugu-agent/src/main/java/com/skt/nugu/sdk/agent/audioplayer/AudioPlayerAgentInterface.kt#L112)
 
-[iOS reference](https://github.com/nugu-developers/nugu-ios/blob/master/NuguAgents/Interface/AudioPlayer/AudioPlayerAgentProtocol.swift#L60)
+[iOS reference](https://github.com/nugu-developers/nugu-ios/blob/master/NuguAgents/Sources/CapabilityAgents/AudioPlayer/AudioPlayerAgentProtocol.swift#L60)
 
 [Linux reference](https://github.com/nugu-developers/nugu-linux/blob/master/include/capability/audio_player_interface.hh#L169)
 
