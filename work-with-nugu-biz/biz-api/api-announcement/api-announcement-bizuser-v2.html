@@ -9,11 +9,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
 
 <meta http-equiv="Last-Modified" content="2023-01-27 02:46:07 +0000">
-<meta http-equiv="Title" content="Developers | Guide - Biz 사용자 그룹 생성">
-<title>Developers | Guide - Biz 사용자 그룹 생성</title>
-<meta property="og:url" content="https://developers-doc.nugu.co.kr/work-with-nugu-biz/biz-api/api-enrolleduser/biz/api-enrolleduser-creategroup">
+<meta http-equiv="Title" content="Developers | Guide - Biz 사용자별 Announcement 전송 V2">
+<title>Developers | Guide - Biz 사용자별 Announcement 전송 V2</title>
+<meta property="og:url" content="https://developers-doc.nugu.co.kr/work-with-nugu-biz/biz-api/api-announcement/api-announcement-bizuser-v2">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Developers | Guide - Biz 사용자 그룹 생성">
+<meta property="og:title" content="Developers | Guide - Biz 사용자별 Announcement 전송 V2">
 <meta property="og:image" content="https://developers-doc.nugu.co.kr/assets/img/logo-nugu.svg">
 <script type="text/javascript" src="/_assets/base/jquery-3.6.0.min.js"></script><script type="text/javascript" src="/_assets/base/tabs.js"></script><script type="text/javascript" src="/_assets/base/navigation.js"></script><script type="text/javascript" src="/_assets/base/code.js"></script><link rel="stylesheet" href="/_assets/css/style.css">
 <link rel="stylesheet" href="/_assets/css/syntax.css">
@@ -2369,13 +2369,16 @@
         <div id="container_wrapper" class="flex-right flex-right--container">
             <div id="container" class="container">
                 <div class="title">
-                    <h1>Biz 사용자 그룹 생성</h1>
+                    <h1>Biz 사용자별 Announcement 전송 V2</h1>
                     
                 </div>
                 <div class="content">
-                    <p>Biz 사용자를 관리하기 위한 그룹을 생성하는 기능입니다.</p>
+                    <p>등록된 Biz 사용자가 Biz API 수신 및 제휴사 계정 인증을 한 경우, 계정 인증을 통해 생성된 토큰을 바탕으로 개인에게 특화된 Announcement 메세지를 사용자의 디바이스에 발송 할 수 있습니다.</p>
 
-<h2 id="1-url">1. URL<a href="#1-url" class="go-hash hash-internal a-internal"></a><div class="copy-link" data-header-link="/work-with-nugu-biz/biz-api/api-enrolleduser/biz/api-enrolleduser-creategroup#1-url"></div>
+<p>기존의 <code class="language-plaintext highlighter-rouge">Biz 사용자별 Announcement 전송 V1</code> 은 Response 의 응답 시간이 경우에 따라 길게 소요될 수가 있어서, V2버전의 경우 요청에 대한 응답을 미리 준 후 비동기로 요청을 처리하며, 처리된 결과는 문서에 정의된 <code class="language-plaintext highlighter-rouge">callbackUrl</code> 을 통해 전달 받을수 있도록 변경/개선 되었습니다.</p>
+
+<h2 id="1-url-">1. URL <a id="biz-announcement-v2-1url" href="#biz-announcement-v2-1url" class="go-hash hash-internal a-internal"></a>
+<div class="copy-link" data-header-link="/work-with-nugu-biz/biz-api/api-announcement/api-announcement-bizuser-v2#biz-announcement-v2-1url"></div>
 </h2>
 
 <article class="code">
@@ -2388,16 +2391,18 @@
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
 <td class="rouge-gutter gl"><pre class="lineno">1
 </pre></td>
-<td class="rouge-code"><pre>[POST] https://biz-api.sktnugu.com/api/v1/enrolledUser/group
+<td class="rouge-code"><pre>[POST] https://biz-api.sktnugu.com/api/v2/enrolledUser/user/{userApiToken}/announcement?callBack={callBackUrl}
 </pre></td>
 </tr></tbody></table></code></pre></div></div>
 </div>
 </article>
 
-<h2 id="2-request">2. Request<a href="#2-request" class="go-hash hash-internal a-internal"></a><div class="copy-link" data-header-link="/work-with-nugu-biz/biz-api/api-enrolleduser/biz/api-enrolleduser-creategroup#2-request"></div>
+<h2 id="2-request-">2. Request <a id="biz-announcement-v2-2request" href="#biz-announcement-v2-2request" class="go-hash hash-internal a-internal"></a>
+<div class="copy-link" data-header-link="/work-with-nugu-biz/biz-api/api-announcement/api-announcement-bizuser-v2#biz-announcement-v2-2request"></div>
 </h2>
 
-<h3 id="21-body">2.1 Body<a href="#21-body" class="go-hash hash-internal a-internal"></a><div class="copy-link" data-header-link="/work-with-nugu-biz/biz-api/api-enrolleduser/biz/api-enrolleduser-creategroup#21-body"></div>
+<h3 id="21-body-">2.1 Body <a id="biz-announcement-v2-2.1body" href="#biz-announcement-v2-2.1body" class="go-hash hash-internal a-internal"></a>
+<div class="copy-link" data-header-link="/work-with-nugu-biz/biz-api/api-announcement/api-announcement-bizuser-v2#biz-announcement-v2-2.1body"></div>
 </h3>
 
 <p><strong>body</strong></p>
@@ -2418,130 +2423,286 @@
 6
 7
 8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
 </pre></td>
 <td class="rouge-code"><pre><span class="p">{</span><span class="w">
-  </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"XXX"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"alias"</span><span class="p">:</span><span class="w"> </span><span class="s2">"XXX"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"playServiceIds"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-    </span><span class="s2">"aaa.bbb.ccc"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"ddd.eee.fff"</span><span class="w">
-  </span><span class="p">]</span><span class="w">
+  </span><span class="nl">"playServiceId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"XXX"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"tts"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"발송 내용"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"speed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"100"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"pause1"</span><span class="p">:</span><span class="w"> </span><span class="s2">"600"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"pause2"</span><span class="p">:</span><span class="w"> </span><span class="s2">"300"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"imageText2"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"타이틀"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"header"</span><span class="p">:</span><span class="w"> </span><span class="s2">"헤더"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"body"</span><span class="p">:</span><span class="w"> </span><span class="s2">"본문"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"footer"</span><span class="p">:</span><span class="w"> </span><span class="s2">"부가설명"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://imageUrl"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"grammarGuide"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="s2">"발화문1"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"발화문2"</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></pre></td>
 </tr></tbody></table></code></pre></div></div>
 </div>
 </article>
 
-<h3 id="22-설명">2.2 설명<a href="#22-%EC%84%A4%EB%AA%85" class="go-hash hash-internal a-internal"></a><div class="copy-link" data-header-link="/work-with-nugu-biz/biz-api/api-enrolleduser/biz/api-enrolleduser-creategroup#22-설명"></div>
+<h3 id="22-설명-">2.2 설명 <a id="biz-announcement-v2-2.2" href="#biz-announcement-v2-2.2" class="go-hash hash-internal a-internal"></a>
+<div class="copy-link" data-header-link="/work-with-nugu-biz/biz-api/api-announcement/api-announcement-bizuser-v2#biz-announcement-v2-2.2"></div>
 </h3>
 
 <table>
   <thead>
     <tr>
-      <th style="text-align: left">이름</th>
-      <th style="text-align: left">유형</th>
-      <th style="text-align: left">속성</th>
-      <th style="text-align: left">길이</th>
-      <th style="text-align: left">필수</th>
-      <th style="text-align: left">설명</th>
+      <th>이름</th>
+      <th>유형</th>
+      <th>속성</th>
+      <th>필수</th>
+      <th>설명</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: left">Publisher-Token</td>
-      <td style="text-align: left">Header</td>
-      <td style="text-align: left">string</td>
-      <td style="text-align: left"> </td>
-      <td style="text-align: left">Y</td>
-      <td style="text-align: left">퍼블리셔가 보유한 토큰</td>
+      <td>Publisher-Token</td>
+      <td>Header</td>
+      <td>string</td>
+      <td>Y</td>
+      <td>퍼블리셔가 보유한 토큰</td>
     </tr>
     <tr>
-      <td style="text-align: left">name</td>
-      <td style="text-align: left">body</td>
-      <td style="text-align: left">string</td>
-      <td style="text-align: left">100</td>
-      <td style="text-align: left">Y</td>
-      <td style="text-align: left">생성할 그룹 이름</td>
+      <td>userApiToken</td>
+      <td>path</td>
+      <td>string</td>
+      <td>Y</td>
+      <td>발송할 사용자의 API 토큰</td>
     </tr>
     <tr>
-      <td style="text-align: left">alias</td>
-      <td style="text-align: left">body</td>
-      <td style="text-align: left">string</td>
-      <td style="text-align: left">100</td>
-      <td style="text-align: left"> </td>
-      <td style="text-align: left">생성할 그룹의 Alias</td>
+      <td>callBackUrl</td>
+      <td>query param</td>
+      <td>string</td>
+      <td> </td>
+      <td>처리결과를 받을 URL(80/443포트만 허용)<br>미입력시 전송되지 않는다.</td>
     </tr>
     <tr>
-      <td style="text-align: left">playServiceIds</td>
-      <td style="text-align: left">body</td>
-      <td style="text-align: left">array of string</td>
-      <td style="text-align: left">각각 100</td>
-      <td style="text-align: left"> </td>
-      <td style="text-align: left">퍼블리셔가 소유한 그룹에 할당할 private play 목록</td>
+      <td>playServiceId</td>
+      <td>body</td>
+      <td>string</td>
+      <td>Y</td>
+      <td>발송 대상 play<br>대상 play의 합성음, TTS Domain을 기준으로 SKML을 생성</td>
+    </tr>
+    <tr>
+      <td>tts</td>
+      <td>body</td>
+      <td>object</td>
+      <td> </td>
+      <td>TTS를 구성하는 객체</td>
+    </tr>
+    <tr>
+      <td>tts.text</td>
+      <td>body</td>
+      <td>string</td>
+      <td>Y</td>
+      <td>발화문장<br>발화문장, Display 객체 중 반드시 1개 이상은 존재해야 한다.</td>
+    </tr>
+    <tr>
+      <td>tts.speed</td>
+      <td>body</td>
+      <td>string</td>
+      <td> </td>
+      <td>발화속도<br>85, 90… 120까지의 5단위 값<br>기본값은 100</td>
+    </tr>
+    <tr>
+      <td>tts.pause1</td>
+      <td>body</td>
+      <td>string</td>
+      <td> </td>
+      <td>문장 사이 묵음 구간 길이<br>300, 400… 900까지의 100단위 값<br>기본값은 600</td>
+    </tr>
+    <tr>
+      <td>tts.pause2</td>
+      <td>body</td>
+      <td>string</td>
+      <td> </td>
+      <td>100, 200… 500까지의 100단위 값<br>기본값은 300</td>
+    </tr>
+    <tr>
+      <td>display</td>
+      <td>body</td>
+      <td>object</td>
+      <td>Y</td>
+      <td>Display 객체<br>발화문장, Display 객체 중 반드시 1개 이상은 존재해야 한다.</td>
+    </tr>
+    <tr>
+      <td>display.type</td>
+      <td>body</td>
+      <td>string</td>
+      <td>Y</td>
+      <td>사용할 Display Template<br>FullText1, ImageText2중 하나</td>
+    </tr>
+    <tr>
+      <td>display.title</td>
+      <td>body</td>
+      <td>string</td>
+      <td>Y</td>
+      <td>화면 타이틀</td>
+    </tr>
+    <tr>
+      <td>display.header</td>
+      <td>body</td>
+      <td>string</td>
+      <td>Y</td>
+      <td>본문 제목</td>
+    </tr>
+    <tr>
+      <td>display.body</td>
+      <td>body</td>
+      <td>string</td>
+      <td>Y</td>
+      <td>본문 내용</td>
+    </tr>
+    <tr>
+      <td>display.footer</td>
+      <td>body</td>
+      <td>string</td>
+      <td> </td>
+      <td>본문 부가 설명</td>
+    </tr>
+    <tr>
+      <td>display.image</td>
+      <td>body</td>
+      <td>string</td>
+      <td> </td>
+      <td>이미지<br>ImageText Type에서 이미지가 없을 경우, 디폴트 이미지 노출<br><img src="/assets/images/img_notification.png" alt="" class="img-inline">
+</td>
+    </tr>
+    <tr>
+      <td>display.grammarGuide</td>
+      <td>body</td>
+      <td>array of string</td>
+      <td> </td>
+      <td>가이드 발화문</td>
     </tr>
   </tbody>
 </table>
 
-<h2 id="3-response">3. Response<a href="#3-response" class="go-hash hash-internal a-internal"></a><div class="copy-link" data-header-link="/work-with-nugu-biz/biz-api/api-enrolleduser/biz/api-enrolleduser-creategroup#3-response"></div>
+<h2 id="3-response-">3. Response <a id="biz-announcement-v2-3response" href="#biz-announcement-v2-3response" class="go-hash hash-internal a-internal"></a>
+<div class="copy-link" data-header-link="/work-with-nugu-biz/biz-api/api-announcement/api-announcement-bizuser-v2#biz-announcement-v2-3response"></div>
 </h2>
 
-<h3 id="31-http-status">3.1 Http Status<a href="#31-http-status" class="go-hash hash-internal a-internal"></a><div class="copy-link" data-header-link="/work-with-nugu-biz/biz-api/api-enrolleduser/biz/api-enrolleduser-creategroup#31-http-status"></div>
+<h3 id="31-http-status-">3.1 HTTP Status <a id="biz-announcement-v2-3.1httpstatus" href="#biz-announcement-v2-3.1httpstatus" class="go-hash hash-internal a-internal"></a>
+<div class="copy-link" data-header-link="/work-with-nugu-biz/biz-api/api-announcement/api-announcement-bizuser-v2#biz-announcement-v2-3.1httpstatus"></div>
 </h3>
 
 <table>
   <thead>
     <tr>
-      <th style="text-align: left">HTTP Status</th>
-      <th style="text-align: left">errorCode</th>
-      <th style="text-align: left">설명</th>
+      <th>HTTP Status</th>
+      <th>errorCode</th>
+      <th>설명</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: left">201</td>
-      <td style="text-align: left"> </td>
-      <td style="text-align: left">정상 생성</td>
+      <td>200</td>
+      <td> </td>
+      <td>정상 요청</td>
     </tr>
     <tr>
-      <td style="text-align: left">403</td>
-      <td style="text-align: left"> </td>
-      <td style="text-align: left">퍼블리셔 API Token이 유효하지 않을 경우의 응답</td>
+      <td>403</td>
+      <td> </td>
+      <td>퍼블리셔 API Token이 유효하지 않거나, 유효하지 않은 자원에 접근할 경우 리턴</td>
     </tr>
     <tr>
-      <td style="text-align: left">401</td>
-      <td style="text-align: left"> </td>
-      <td style="text-align: left">생성하고자 하는 그룹이름이 기존재할 경우의 응답</td>
+      <td>404</td>
+      <td> </td>
+      <td>발송 요청한 사용자가 존재하지 않을 때 응답값</td>
     </tr>
     <tr>
-      <td style="text-align: left">400</td>
-      <td style="text-align: left">PLAY001</td>
-      <td style="text-align: left">요청한 play의 playServiceId가 없거나 잘못된 경우</td>
+      <td>400</td>
+      <td>V1ANN001</td>
+      <td>body 값을 파싱할 수 없음</td>
     </tr>
     <tr>
-      <td style="text-align: left">400</td>
-      <td style="text-align: left">PLAY002</td>
-      <td style="text-align: left">요청한 play가 서비스중이 아닌 경우</td>
+      <td>400</td>
+      <td>V1ANN002</td>
+      <td>playServiceId 없음</td>
     </tr>
     <tr>
-      <td style="text-align: left">400</td>
-      <td style="text-align: left">PLAY003</td>
-      <td style="text-align: left">퍼블리셔의 소유가 아닌 play를 요청한 경우</td>
+      <td>400</td>
+      <td>V1ANN101</td>
+      <td>tts 객체가 모두 존재하지 않음</td>
     </tr>
     <tr>
-      <td style="text-align: left">400</td>
-      <td style="text-align: left">GROUP002</td>
-      <td style="text-align: left">그룹명이 없거나, 사이즈를 초과할 경우</td>
+      <td>400</td>
+      <td>V1ANN102</td>
+      <td>tts.text 없음</td>
     </tr>
     <tr>
-      <td style="text-align: left">400</td>
-      <td style="text-align: left">GROUP003</td>
-      <td style="text-align: left">alias의 사이즈를 초과한 경우</td>
+      <td>400</td>
+      <td>V1ANN103</td>
+      <td>tts.speed 값이 잘못됨</td>
+    </tr>
+    <tr>
+      <td>400</td>
+      <td>V1ANN104</td>
+      <td>tts.pause1 값이 잘못됨</td>
+    </tr>
+    <tr>
+      <td>400</td>
+      <td>V1ANN105</td>
+      <td>tts.pause2 값이 잘못됨</td>
+    </tr>
+    <tr>
+      <td>400</td>
+      <td>V1ANN201</td>
+      <td>display.type 값이 잘못됨</td>
+    </tr>
+    <tr>
+      <td>400</td>
+      <td>V1ANN202</td>
+      <td>display.title 값이 없음</td>
+    </tr>
+    <tr>
+      <td>400</td>
+      <td>V1ANN203</td>
+      <td>display.header 값이 없음</td>
+    </tr>
+    <tr>
+      <td>400</td>
+      <td>V1ANN204</td>
+      <td>display.body 값이 없음</td>
+    </tr>
+    <tr>
+      <td>400</td>
+      <td>V1ANN301</td>
+      <td>허용되지 않는 playServiceId</td>
     </tr>
   </tbody>
 </table>
 
-<h3 id="32-body">3.2 Body<a href="#32-body" class="go-hash hash-internal a-internal"></a><div class="copy-link" data-header-link="/work-with-nugu-biz/biz-api/api-enrolleduser/biz/api-enrolleduser-creategroup#32-body"></div>
+<h3 id="32-body-">3.2 Body <a id="biz-announcement-v2-3.2body" href="#biz-announcement-v2-3.2body" class="go-hash hash-internal a-internal"></a>
+<div class="copy-link" data-header-link="/work-with-nugu-biz/biz-api/api-announcement/api-announcement-bizuser-v2#biz-announcement-v2-3.2body"></div>
 </h3>
+
+<ul>
+  <li>callback URL을 입력했을 경우에만 전달받음</li>
+</ul>
 
 <article class="code">
     
@@ -2561,15 +2722,17 @@
 8
 9
 10
+11
 </pre></td>
 <td class="rouge-code"><pre><span class="p">{</span><span class="w">
   </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"XXX"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"XXX"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"XXX"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"alias"</span><span class="p">:</span><span class="w"> </span><span class="s2">"XXX"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"playServiceIds"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-    </span><span class="s2">"aaa.bbb.ccc"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"ddd.eee.fff"</span><span class="w">
+  </span><span class="nl">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"XXX"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"resultCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"OK"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"deviceResults"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"XXX"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
   </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></pre></td>
@@ -2577,63 +2740,69 @@
 </div>
 </article>
 
-<h3 id="33-설명">3.3 설명<a href="#33-%EC%84%A4%EB%AA%85" class="go-hash hash-internal a-internal"></a><div class="copy-link" data-header-link="/work-with-nugu-biz/biz-api/api-enrolleduser/biz/api-enrolleduser-creategroup#33-설명"></div>
+<h3 id="33-설명-">3.3 설명 <a id="biz-announcement-v2-3.3" href="#biz-announcement-v2-3.3" class="go-hash hash-internal a-internal"></a>
+<div class="copy-link" data-header-link="/work-with-nugu-biz/biz-api/api-announcement/api-announcement-bizuser-v2#biz-announcement-v2-3.3"></div>
 </h3>
 
 <table>
   <thead>
     <tr>
-      <th style="text-align: left">이름</th>
-      <th style="text-align: left">속성</th>
-      <th style="text-align: left">설명</th>
+      <th>이름</th>
+      <th>속성</th>
+      <th>설명</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: left">id</td>
-      <td style="text-align: left">string</td>
-      <td style="text-align: left">생성한 그룹 id</td>
+      <td>id</td>
+      <td>string</td>
+      <td>발송 대상 Biz 사용자 ID</td>
     </tr>
     <tr>
-      <td style="text-align: left">name</td>
-      <td style="text-align: left">string</td>
-      <td style="text-align: left">생성한 그룹 이름</td>
+      <td>name</td>
+      <td>string</td>
+      <td>발송 대상 Biz 사용자 이름</td>
     </tr>
     <tr>
-      <td style="text-align: left">token</td>
-      <td style="text-align: left">string</td>
-      <td style="text-align: left">생성한 그룹 API 토큰</td>
+      <td>email</td>
+      <td>string</td>
+      <td>발송 대상 Biz 사용자 이메일</td>
     </tr>
     <tr>
-      <td style="text-align: left">alias</td>
-      <td style="text-align: left">string</td>
-      <td style="text-align: left">생성한 그룹의 Alias</td>
+      <td>resultCode</td>
+      <td>enum</td>
+      <td>발송 결과<br>OK : 발송 대상 기기 모두 성공<br>SOME_OK : 발송 대상 기기 일부 성공<br>FAIL : 발송 대상 기기 모두 실패<br>NOT_AGREE : API 수신 거부<br>NO_DEVICE : API 수신 허용 기기 없음</td>
     </tr>
     <tr>
-      <td style="text-align: left">playServiceIds</td>
-      <td style="text-align: left">array of string</td>
-      <td style="text-align: left">그룹에 할당된 private play의 playServiceId</td>
+      <td>deviceResults</td>
+      <td>array of object</td>
+      <td>기기별 응답값</td>
+    </tr>
+    <tr>
+      <td>deviceResults[].code</td>
+      <td>enum</td>
+      <td>기기별 발송 결과<br>OK : 발송 성공<br>NOT_CONNECTED : 사용자에 연결되지 않은 기기<br>TIMEOUT : 기기와의 연결 실패<br>CONNECT_ERROR : 기기가 꺼져 있거나, 네트워크에 문제가 있음<br>NOT_SUPPORTED : 지원하지 않는 기기<br>ERROR : 알 수 없는 에러(개발팀 문의 필요)</td>
     </tr>
   </tbody>
 </table>
 
                     <div class="pagination pagination--nav" data-skip-search-index>
     
-    <a href="/work-with-nugu-biz/biz-api/api-enrolleduser/biz" class="left a-internal">
+    <a href="/work-with-nugu-biz/biz-api/api-announcement/api-announcement-bizuser" class="left a-internal">
         <div class="block">
             <div class="cont">
                 <div class="cont-desc">Previous</div>
-                <div class="cont-tit">Biz 사용자 그룹 관련</div>
+                <div class="cont-tit">Biz 사용자별 Announcement 전송 V1</div>
             </div>
         </div>
     </a>
     
     
-    <a href="/work-with-nugu-biz/biz-api/api-enrolleduser/biz/api-enrolleduser-modgroup" class="right a-internal">
+    <a href="/work-with-nugu-biz/biz-api/api-announcement/api-announcement-usergroup" class="right a-internal">
         <div class="block">
             <div class="cont">
                 <div class="cont-desc">Next</div>
-                <div class="cont-tit">Biz 사용자 그룹 수정</div>
+                <div class="cont-tit">Biz 사용자 그룹별 Announcement 전송</div>
             </div>
         </div>
     </a>
